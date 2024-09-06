@@ -93,7 +93,7 @@ function adicionar(produtos) {
 
 async function enviarDados(produtos) {
   try {
-    const res = await fetch('https://gestorestoque.vercel.app/produtos.html', {
+    const res = await fetch('http://localhost:3000/produtos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
