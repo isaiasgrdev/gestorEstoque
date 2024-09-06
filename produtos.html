@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="produtos.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="titlePage">
+          <h1>GESTOR DE ESTOQUE</h1>
+        </div>
+        <div class="accont">
+          <img class="bars" src="image/bars.svg" alt="" srcset="" />
+          <img class="user" src="image/user.svg" alt="" />
+        </div>
+      </header>
+      <main>
+        <div id="nav">
+          <span class="fecharMenu">X</span>
+          <ul>
+            <li>
+              <a href="index.html">
+                <img src="image/house.svg" alt="" />
+                <p>Home</p>
+              </a>
+            </li>
+            <li>
+              <a href="produtos.html">
+                <img src="image/produtos.svg" alt="" >
+                <p>Produtos</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                 <img src="image/vendas.svg" alt="" />
+        
+                <p>Vendas</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="image/clients.svg" alt="" />
+                <p>Clientes</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="image/fornecedores.svg" alt="" />
+                <p>Fornecedores</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mainContent">
+          <div class="conteudoProdutos">
+            <h1>PRODUTOS</h1>
+  
+            <div class="cabecalho">
+              <input type="search" class="searchProducts" />
+              <button class="btnCadastrar">
+                <span class="more">+</span>
+                <span>CADASTRAR PRODUTOS</span>
+              </button>
+            </div>
+  
+            <div class="formularioProdutos">
+              <form>
+                <span class="closeFormBtn">X</span>
+                <h1>Preencha as informações do produto</h1>
+  
+                <p>Preencha todos os campos obrigatórios</p>
+  
+                <input type="text" placeholder="Nome do produto" name="nome" />
+  
+                <input
+                  type="text"
+                  class="marcaProduto"
+                  placeholder="Marca"
+                  name="marca"
+                />
+  
+                <div>
+                  <label for="tipoProduto">Tipo de produto</label>
+                  <select name="tipoProduto" id="tipoProduto">
+                    <option value="">--Selecione--</option>
+                    <option value="Acessórios">Acessórios</option>
+                    <option value="Jaquetas/Camisas">Jaquetas/Camisas</option>
+                    <option value="Calça/bermudas">Calça/bermudas</option>
+                    <option value="Calçados">Calçados</option>
+                  </select>
+                </div>
+  
+                <fieldset class="variacoes">
+                  <legend>Variações</legend>
+                  <div class="color">
+                    <label for="productColor">Cor do produto</label>
+                    <select name="productColor" id="productColor">
+                      <option value="transparent" selected>--Selecione--</option>
+                      <option value="blue">Azul</option>
+                      <option value="red">Vermelho</option>
+                      <option value="white">Branco</option>
+                      <option value="black">Preto</option>
+                      <option value="green">Verde</option>
+                      <option value="yellow">Amarelo</option>
+                      <option value="orange">Laranja</option>
+                      <option value="purple">Roxo</option>
+                      <option value="pink">Rosa</option>
+                      <option value="gray">Cinza</option>
+                    </select>
+                    <span class="colorSelected"></span>
+                  </div>
+  
+                  <input
+                    type="number"
+                    name="stockQuantity"
+                    id="stockQuantity"
+                    placeholder="Qtde em estoque"
+                  />
+  
+                  <div>
+                    <label for="tamanho1">Selecione o tamanho do produto</label>
+                    <select name="tamanho1" id="tamanho1">
+                      <option value="">--Selecione--</option>
+                      <option value="">PP</option>
+                      <option value="">P</option>
+                      <option value="">M</option>
+                      <option value="">G</option>
+                      <option value="">GG</option>
+                    </select>
+                  </div>
+                </fieldset>
+  
+                <input
+                  type="number"
+                  name="price"
+                  id=""
+                  class="price"
+                  placeholder="Preço do produto"
+                />
+  
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="observations"
+                  placeholder="Observações"
+                />
+  
+                <button id="addProductBtn">ADICIONAR PRODUTO</button>
+              </form>
+            </div>
+  
+            <div class="tabela">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Marca</th>
+                    <th>Preço</th>
+                    <th>Qtd. em estoque</th>
+                    <th>Tipo de produto</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

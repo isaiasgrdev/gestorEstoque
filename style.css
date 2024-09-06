@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+.container{
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  padding: 20px;
+  gap: 20px;
+}
+
+header .accont {
+  display: flex;
+  height: 50px;
+  min-width: 50px;
+}
+header .accont .bars {
+  display: none;
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+header .accont .user {
+  height: 50px;
+  width: auto;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: whitesmoke;
+}
+main .fecharMenu{
+  width: 30px;
+  font-weight: 600;
+  font-size: 25px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  opacity: 0;
+}
+main .fecharMenu:hover {
+  transition: 0.3s;
+  background-color: #87ceeb;
+}
+main #nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #6495ed;
+  justify-content: start;
+  padding-top: 20px;
+  gap: 5px;
+  box-shadow:0 0 20px rgba(0, 0, 0, 0.2);
+}
+main #nav.activeMenu{
+  display: flex;
+  transform: translateX(0);
+ }
+ 
+#nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+}
+#nav ul li{
+  width: 280px;
+  display: flex;
+}
+#nav ul li a {
+  padding: 30px;
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  align-items: center;
+  color: black;
+}
+#nav ul li a img {
+  width: 35px;
+}
+#nav ul li:hover {
+  transition: 0.3s;
+  background-color: #87ceeb;
+  border-left: blue solid 5px;
+}
+.mainContent {
+  width: 100%;
+  height: auto;
+  margin: 20px;
+}
+.mainContent .conteudo {
+  max-width: 1100px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.conteudo .caixasDashboards {
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.conteudo .caixasDashboards .caixas {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-left: solid 5px;
+}
+#estoqueBaixoDashboard {
+  border-color: #f0ad4e;
+}
+#estoqueBaixoDashboard h3 {
+  color: #f0ad4e;
+  margin: 15px;
+}
+#quantidadeDashboard {
+  border-color: #6495ed;
+}
+#quantidadeDashboard h3 {
+  color: #6495ed;
+  margin: 15px;
+}
+#totalDashboard {
+  border-color: cyan;
+}
+#totalDashboard h3 {
+  color: cyan;
+  margin: 15px;
+}
+
+
+/* aba de produtos */
+
+.conteudoProdutos {
+  display: flex;
+  flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+}
+.conteudoProdutos .cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  gap: 10px;
+}
+.conteudoProdutos .cabecalho .searchProducts {
+  max-width: 150px;
+  height: 30px;
+  border-color: darkgray;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.conteudoProdutos .cabecalho .btnCadastrar {
+  background-color: darkblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 15px;
+  gap: 10px;
+  padding: 0 10px;
+}
+.cabecalho .btnCadastrar .more {
+  font-weight: 700;
+  font-size: 30px;
+}
+.conteudoProdutos .cabecalho .btnCadastrar:hover {
+  background-color: mediumblue;
+}
+.conteudoProdutos .tabela {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+}
+.tabela table {
+  border: solid black 0.5px;
+
+}
+th {
+  background-color: darkgrey;
+  padding: 10px;
+
+}
+td {
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+.conteudoProdutos .formularioProdutos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.formularioProdutos form {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  max-width: 500px;
+  padding: 20px;
+  border: solid darkgray 1px;
+  border-radius: 15px 0 15px 15px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.formularioProdutos form.activeRegister {
+  display: flex;
+}
+.formularioProdutos form p {
+  display: none;
+  color: red;
+  font-weight: 600;
+}
+.formularioProdutos form input {
+  height: 30px;
+  width: 100%;
+  padding-left: 10px;
+  border: solid 1px #000;
+  border-radius: 5px;
+  /* border-bottom: solid #6495ed 3px; */
+}
+
+.formularioProdutos form .variacoes {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  border: solid 1px #000;
+  border-radius: 5px;
+}
+.formularioProdutos form .observations {
+  min-height: 70px;
+}
+.formularioProdutos form button {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: midnightblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.formularioProdutos form button:hover {
+  background-color: mediumblue;
+}
+.formularioProdutos form h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: gray;
+}
+.closeFormBtn {
+  position: absolute;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+form .color {
+  display: flex;
+  gap: 10px;
+}
+.color .colorSelected {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.deletarBtn,
+.editarBtn {
+  height: auto;
+  width: 30px;
+  cursor: pointer;
+}
+
+/* MEDIA QUERYS */
+
+@media (max-width: 1250px) {
+ 
+  .conteudo .caixasDashboards {
+    justify-content: center;
+  }
+  .conteudoProdutos{
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 850px) {
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .container{
+    position: relative;
+  }
+  header {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+  header .accont {
+    width: 100%;
+    justify-content: space-between;
+  }
+  header .accont .bars {
+    display: flex;
+  }
+  main #nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-280px);
+    transition: 1s;
+    height: 100vh;
+  }
+  main .fecharMenu{
+    opacity: 1;
+  }
+}
+@media (max-width: 620px){
+  .conteudoProdutos .tabela{
+  font-size: 15px;
+  overflow-y: scroll;
+  max-width: 600px;
+  justify-content: initial;
+ }
+}
