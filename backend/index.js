@@ -27,7 +27,11 @@ mongoose.connect('mongodb+srv://gestordeestoque:gestor123@cluster0.dzz7v.mongodb
   .then(() => console.log("Servidor rodando na porta 3000"))
   .catch(() => console.error("Erro ao conectar ao banco de dados", err));
 
-app.post("/produtos", async (req, res) => {
+app.post("/api/produtos", async (req, res) => {
+  // return res.json({
+  //   ok: true
+  // })
+
   try {
     const dados = new enviarDados(req.body);
     await dados.save();
