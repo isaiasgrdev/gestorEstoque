@@ -93,7 +93,7 @@ function adicionar(produtos) {
 
 async function enviarDados(produtos) {
   try {
-    const res = await fetch('https://gestor-estoque-zec8.vercel.app/produtos.html/produtos', {
+    const res = await fetch('https://gestorestoque.vercel.app/produtos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
