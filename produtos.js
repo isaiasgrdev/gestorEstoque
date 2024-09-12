@@ -121,7 +121,7 @@ async function enviarDados(produtos) {
   }
 }
 
-function criarTabela() {
+function criarTabela(produtos) {
   let tbody = document.querySelector("tbody");
   tbody.innerText = "";
   for (let i = 0; i < produtosArray.length; i++) {
@@ -134,15 +134,15 @@ function criarTabela() {
     let td_tipoProduto = tr.insertCell();
     let td_acoes = tr.insertCell();
 
-    td_nome.innerText = produtosArray[i].nome;
-    let nome = produtosArray[i].nome;
-    td_marca.innerText = produtosArray[i].marca;
+    td_nome.innerText = produtos[i].nome;
+    let nome = produtos[i].nome;
+    td_marca.innerText = produtos[i].marca;
     if (produtosArray[i].marca === "") {
       td_marca.innerText = "Não informado";
     }
-    td_preco.innerText = produtosArray[i].preco;
-    td_qtdEstoque.innerText = produtosArray[i].qtdEstoque;
-    td_tipoProduto.innerText = produtosArray[i].tipoProduto;
+    td_preco.innerText = produtos[i].preco;
+    td_qtdEstoque.innerText = produtos[i].qtdEstoque;
+    td_tipoProduto.innerText = produtos[i].tipoProduto;
 
     let imgEditar = document.createElement("img");
     let imgDeletar = document.createElement("img");
