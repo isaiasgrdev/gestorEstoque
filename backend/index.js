@@ -15,7 +15,7 @@ app.use(cors())
 const produtosSchema = new mongoose.Schema({
   nome: String,
   marca: String,
-  tipoProduto: Boolean,
+  tipoProduto: String,
   qtdEstoque: Number,
   preco: Number,
 }
@@ -23,8 +23,8 @@ const produtosSchema = new mongoose.Schema({
 
 const enviarDados = mongoose.model('produtos', produtosSchema)
 
-mongoose.connect('mongodb+srv://gestordeestoque:gestor123@cluster0.dzz7v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
-  .then(() => console.log("Servidor rodando na porta 3000"))
+mongoose.connect('mongodb+srv://isaiasgr575:uxfnJt9uLbpOKCI7@cluster0.mdovr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+  .then(() => console.log("Servidor rodando na porta 5000"))
   .catch(() => console.error("Erro ao conectar ao banco de dados", err));
 
 app.post("/api/produtos", async (req, res) => {
@@ -41,4 +41,4 @@ app.post("/api/produtos", async (req, res) => {
   }
 });
 
-app.listen(3000)
+app.listen(5000)
