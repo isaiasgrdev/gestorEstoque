@@ -55,10 +55,10 @@ addProducBtn.addEventListener("click", (e) => {
   e.preventDefault();
   let produtos = lerDados();
   if (validarDados(produtos)) {
-    enviarDados(produtos)
     adicionar(produtos);
   }
   criarTabela(produtos);
+  enviarDados(produtos)
   console.log(produtosArray);
 });
 
