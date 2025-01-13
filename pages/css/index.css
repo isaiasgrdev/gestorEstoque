@@ -45,7 +45,6 @@ header .accont .user {
 }
 
 main {
-  position: relative;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -102,8 +101,8 @@ main #nav.activeMenu{
 #nav ul li a img {
   width: 35px;
 }
-#nav ul li:hover {
-  transition: 0.3s;
+
+.ativado{
   background-color: #87ceeb;
   border-left: blue solid 5px;
 }
@@ -216,6 +215,12 @@ main #nav.activeMenu{
   border: solid black 0.5px;
 
 }
+.tabela table i{
+  cursor: pointer
+}
+.tabela table i:hover{
+  transform: scale(1.05);
+}
 th {
   background-color: darkgrey;
   padding: 10px;
@@ -240,13 +245,16 @@ td {
   flex-direction: column;
   gap: 10px;
   font-size: 16px;
+  width: 500px;
   max-width: 500px;
+  height: 600px;
   padding: 20px;
   border: solid darkgray 1px;
   border-radius: 15px 0 15px 15px;
-  background-color: white;
+  background-color: #FFF;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
+  top: 100px;
 }
 .formularioProdutos form.activeRegister {
   display: flex;
